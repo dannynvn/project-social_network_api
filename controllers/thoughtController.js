@@ -40,7 +40,7 @@ module.exports = {
             const thought = await Thought.create(req.body);
             // find the user associated with the thought just created and add the thought's _id to the user's thoughts array
             const user = await User.findOneAndUpdate(
-                { _id: req.body.userId },
+                { _id: req.params.userId },
                 { $addToSet: { thoughts: thought._id } },
                 { new: true }
             );

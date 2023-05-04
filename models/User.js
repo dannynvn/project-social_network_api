@@ -37,6 +37,11 @@ const UserSchema = new Schema(
     }
 );
 
+// get total count of thoughts on retrieval
+UserSchema.virtual('thoughtCount').get(function () {
+    return this.thoughts.length;
+});
+
 // get total count of friends on retrieval
 UserSchema.virtual('friendCount').get(function () {
     return this.friends.length;
