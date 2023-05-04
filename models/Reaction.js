@@ -12,7 +12,7 @@ const ReactionSchema = new Schema(
         reactionBody: {
             type: String,
             required: true,
-            minLenth: 1,
+            minLength: 1,
             maxLength: 280
         },
         // username is a string and is required
@@ -23,7 +23,7 @@ const ReactionSchema = new Schema(
         // reaction is timestamped when created
         createdAt: {
             type: Date,
-            default: new date.now,
+            default: Date.now,
             get: (createdAtVal) => moment(createdAtVal).format('MMM DD, YYYY [at] hh:mm a')
         }
     },

@@ -20,7 +20,7 @@ const thoughtSchema = new Schema(
         },
         // username is a string and is required for a thought to be created
         username: {
-            typ: String,
+            type: String,
             required: true
         },
         reactions: [{reactionSchema}]

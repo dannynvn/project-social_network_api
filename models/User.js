@@ -30,7 +30,7 @@ const UserSchema = new Schema(
     {
         // use toJSON to tell schema to use virtuals
         toJSON: {
-            virtials: true,
+            virtuals: true,
         },
         // use id instead of _id
         id: false
