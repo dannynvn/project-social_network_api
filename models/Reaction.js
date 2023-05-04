@@ -7,16 +7,19 @@ const ReactionSchema = new Schema({
         type: Schema.Types.ObjectId,
         default: new Types.ObjectId()
     },
+    // reactionBody is a string, it's required, and has a max length of 280 characters
     reactionBody: {
         type: String,
         required: true,
         minLenth: 1,
         maxLength: 280
     },
+    // username is a string and is required
     username: {
         type: String,
         required: true
     },
+    // reaction is timestamped when created
     createdAt: {
         type: Date,
         default: new date.now,
