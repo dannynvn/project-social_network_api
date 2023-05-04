@@ -1,6 +1,6 @@
 const { Thought, User, Reaction } = require('../models');
 
-module.export = {
+module.exports = {
     // get all thoughts
     async getAllThoughts(req, res) {
         try {
